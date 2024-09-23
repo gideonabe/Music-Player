@@ -106,6 +106,10 @@ body {
   outline: 0;
 }
 
+.active{
+  color: #05d5ff;
+}
+
 .music-info {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 15px 15px 0 0;
@@ -120,11 +124,6 @@ body {
   z-index: 0;
 }
 
-@media screen and (max-width: 590px){
-  #volume{
-    display: none;
-  }
-}
 
 .music-container.play .music-info {
   opacity: 1;
@@ -151,4 +150,63 @@ body {
   height: 100%;
   width: 0%;
   transition: width 0.1s linear;
+}
+
+@media screen and (max-width: 690px){
+  #volume{
+    display: none;
+  }
+
+  .music-container {
+    padding: 20px 10px;
+  }
+
+  .img-container {
+    position: relative;
+    width: 90px;
+  }
+
+  .img-container::after {
+    content: '';
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, 50%);
+  }
+  
+  .img-container img {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 90px;
+    width: inherit;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: rotate 3s linear infinite;
+  
+    animation-play-state: paused;
+  }
+
+  .action-btn {
+    background-color: #fff;
+    border: 0;
+    color: #795979;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+    margin: 0 20px;
+  }
+
+  .active{
+    color: #05d5ff;
+  }
+  
+  .action-btn.action-btn-big {
+    color: #796180;
+    font-size: 30px;
+  }
 }
