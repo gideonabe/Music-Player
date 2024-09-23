@@ -18,7 +18,7 @@ const songs = [
   'Stronger - Young Jonn',
   'Big Big Things - Young Jonn',
   'Happiness - Sarz ft Asake, Gunna',
-  'Jelo - Pheelz ft Young John',
+  'Jelo - Pheelz ft Young Jonn',
   'Friendzone - Adekunle Gold',
   'Undignified(Excuse Me) - Dunsin Oyekan',
   'hey',
@@ -39,7 +39,6 @@ function loadSong(song) {
   title.innerText = song;
   audio.src = `music/${song}.mp3`;
   cover.src = `images/${song}.jpg`;
-
 }
 
 function playSong() {
