@@ -19,9 +19,11 @@ let songIndex = 1;
 loadSong(songs[songIndex]);
 
 function loadSong(song) {
+
   title.innerText = song;
   audio.src = `music/${song}.mp3`;
-  cover.src = `images/${song}.jpg`
+  cover.src = `images/${song}.jpg`;
+
 }
 
 function playSong() {
@@ -29,6 +31,8 @@ function playSong() {
   playBtn.querySelector('i.fas').classList.remove('fa-play');
   playBtn.querySelector('i.fas').classList.add('fa-pause');
   audio.play();
+
+  
 }
 
 function pauseSong() {
@@ -89,5 +93,10 @@ prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
 
 audio.addEventListener('timeupdate', updateProgress);
+audio.addEventListener('ended', () => {
+  songIndex = (songIndex + 1) % songs.length;
+  loadSong(songs[songIndex]);
+  audio.play();
+});
 progressContainer.addEventListener('click', setProgress);
 volume.addEventListener('change', () => (audio.volume = volume.value));
