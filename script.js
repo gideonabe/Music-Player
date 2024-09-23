@@ -12,10 +12,22 @@ const shuffle = document.getElementById('shuffle');
 const repeat = document.getElementById('repeat');
 
 // Song titles
-const songs = ['Peaches - Justin Bieber','Need me - Fireboy DML','Stronger - Young John','Big Big Things - Young John', 'Friendzone - Adekunle Gold', 'hey', 'Summer', 'Ukulele'];
+const songs = [
+  'Peaches - Justin Bieber',
+  'Need me - Fireboy DML',
+  'Stronger - Young Jonn',
+  'Big Big Things - Young Jonn',
+  'Happiness - Sarz ft Asake, Gunna',
+  'Jelo - Pheelz ft Young John',
+  'Friendzone - Adekunle Gold',
+  'Undignified(Excuse Me) - Dunsin Oyekan',
+  'hey',
+  'Summer',
+  'Ukulele'
+];
 
 // Keep track of song
-let songIndex = 4;
+let songIndex = 1;
 let isShuffled = false;
 let isRepeating = false;
 
