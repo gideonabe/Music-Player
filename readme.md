@@ -1,0 +1,2 @@
+# Music Player Project
+This is a project that plays limited number of songs, it has a play, pause, previous and next buttons, it also has a volume range where you can control the volume of the song playing. 
